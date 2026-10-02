@@ -110,7 +110,7 @@ public class MainActivity extends Activity {
                 + "var id='cek-haji-simplified-layout';"
                 + "var style=document.getElementById(id);"
                 + "if(!style){style=document.createElement('style');style.id=id;document.head.appendChild(style);}"
-                + "style.textContent='header, footer, .page-header, .tabs, #userwayAccessibilityIcon {display:none !important;} body {background:#fff !important;} .estimasi-content {display:block !important;}';"
+                + "style.textContent='header, footer, .page-header, .tabs, #userwayAccessibilityIcon {display:none !important;} body {background:#fff !important;} .estimasi-content {display:block !important;} .btn-submit {background-color:#0B6B3A !important; border-color:#0B6B3A !important; color:#fff !important;} .btn-submit:hover, .btn-submit:focus {background-color:#08562E !important; border-color:#08562E !important;} #kodePorsi {background-color:#fff !important; border:1px solid #0B6B3A !important; color:#212529 !important;} #kodePorsi:focus {border-color:#0B6B3A !important; box-shadow:0 0 0 .2rem rgba(11,107,58,.2) !important; outline:none !important;}';"
                 + "})();";
         view.evaluateJavascript(script, null);
     }
