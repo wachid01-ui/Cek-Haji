@@ -77,6 +77,7 @@ public class MainActivity extends Activity {
 
             @Override
             public void onPageFinished(WebView view, String url) {
+                applySimplifiedLayout(view);
                 errorView.setVisibility(View.GONE);
                 webView.setVisibility(View.VISIBLE);
             }
@@ -102,6 +103,16 @@ public class MainActivity extends Activity {
         } else {
             webView.loadUrl(START_URL);
         }
+    }
+
+    private void applySimplifiedLayout(WebView view) {
+        String script = "(function(){"
+                + "var id='cek-haji-simplified-layout';"
+                + "var style=document.getElementById(id);"
+                + "if(!style){style=document.createElement('style');style.id=id;document.head.appendChild(style);}"
+                + "style.textContent='header, footer, .page-header, .tabs, #userwayAccessibilityIcon {display:none !important;} body {background:#fff !important;} .estimasi-content {display:block !important;}';"
+                + "})();";
+        view.evaluateJavascript(script, null);
     }
 
     private int dp(int value) {
